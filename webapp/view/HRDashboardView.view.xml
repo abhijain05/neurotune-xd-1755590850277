@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:core="sap.ui.core"
+  xmlns:richtexteditor="sap.ui.richtexteditor"
+  xmlns:viz="sap.viz.ui5"
+  controllerName="preview.app.controller.HRDashboardView"
+  displayBlock="true">
+  <Page title="HRDashboardView" enableScrolling="true">
+    <content>
+      <Title id="title_mildjhdq" text="HR Dashboard"/>
+      <form:SimpleForm id="FC_EmployeeCounts">
+        <form:content>
+          <!-- Empty SimpleForm content -->
+        </form:content>
+      </form:SimpleForm>
+      <Text id="TV_DonutChartPlaceholder" text="Donut Chart: Department Breakdown (Implementation Required)"/>
+      <Text id="TV_BarChartPlaceholder" text="Bar Chart: Performance Metrics (Implementation Required)"/>
+      <Text id="TV_CalendarPlaceholder" text="Calendar: Upcoming Events (Implementation Required)"/>
+      <Table id="TableRecentHires">
+        <items>
+          <ColumnListItem>
+                <cells>
+                        <Text text="Sample Data"/>
+                </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+      <MessagePopover id="MessageArea"/>
+    </content>
+  </Page>
+</mvc:View>

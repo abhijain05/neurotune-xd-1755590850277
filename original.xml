@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDynpro xmlns="http://www.sap.com/wd/webdynpro">
+  <View name="HRDashboardView">
+    <Title>HR Dashboard</Title>
+    <!-- Employee Count Tiles -->
+    <FormContainer id="FC_EmployeeCounts">
+      <FormElement id="FE_TotalEmployees">
+        <Label text="Total Employees" />
+        <TextView id="TV_TotalEmployees" text="{/TotalEmployees}" />
+      </FormElement>
+      <FormElement id="FE_ActiveEmployees">
+        <Label text="Active Employees" />
+        <TextView id="TV_ActiveEmployees" text="{/ActiveEmployees}" />
+      </FormElement>
+      <FormElement id="FE_NewEmployees">
+        <Label text="New Employees (Last Month)" />
+        <TextView id="TV_NewEmployees" text="{/NewEmployees}" />
+      </FormElement>
+    </FormContainer>
+
+    <!-- Department Breakdown Donut Chart -->
+    <!--  WebDynpro doesn't directly support Donut charts.  A placeholder is used. -->
+    <TextView id="TV_DonutChartPlaceholder" text="Donut Chart: Department Breakdown (Implementation Required)" />
+
+
+    <!-- Recent Hires Table -->
+    <Table id="TableRecentHires">
+      <Columns>
+        <Column id="colName">
+          <Label text="Name" />
+        </Column>
+        <Column id="colDepartment">
+          <Label text="Department" />
+        </Column>
+        <Column id="colHireDate">
+          <Label text="Hire Date" />
+        </Column>
+      </Columns>
+      <!-- Data Binding would occur here in a real implementation -->
+    </Table>
+
+    <!-- Performance Metrics Bar Chart -->
+    <!-- WebDynpro doesn't directly support Bar charts. A placeholder is used. -->
+    <TextView id="TV_BarChartPlaceholder" text="Bar Chart: Performance Metrics (Implementation Required)" />
+
+    <!-- Upcoming Events Calendar Widget -->
+    <!-- WebDynpro doesn't have a built-in calendar.  A placeholder is used. -->
+    <TextView id="TV_CalendarPlaceholder" text="Calendar: Upcoming Events (Implementation Required)" />
+
+    <MessageArea id="MessageArea"/>
+
+  </View>
+  <Controller name="HRDashboardViewController">
+    <!-- Methods for data retrieval and chart/calendar integration would go here -->
+    <Method name="onInit">
+      <!-- Initialization Logic -->
+    </Method>
+    <Method name="onRefreshData">
+      <!-- Data Refresh Logic -->
+    </Method>
+    <!-- Example Method to handle chart data (replace with actual implementation)-->
+    <Method name="getDepartmentBreakdownData">
+       <!--  Implementation to retrieve data for the donut chart  -->
+    </Method>
+
+      <!-- Example Method to handle chart data (replace with actual implementation)-->
+    <Method name="getPerformanceMetricsData">
+       <!--  Implementation to retrieve data for the bar chart  -->
+    </Method>
+
+  </Controller>
+</WebDynpro>
